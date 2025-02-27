@@ -4,6 +4,13 @@
   "files": {
     "ignore": ["**/_generated/**"]
   },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUndeclaredDependencies": "off"
+      }
+    }
+  },
   "overrides": [
     {
       // Needed for Page/Layout/Error/NotFound components default export

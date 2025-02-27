@@ -1,4 +1,4 @@
-# Turbo Starter
+# Turbo Full-stack Starter
 
 This is a starter kit for bootstrapping full-stack applications with Turborepo. This starter kit is designed to be used with [TurboRepo](https://turborepo.org) and other accompanying starter kits. These are:
 
@@ -18,14 +18,13 @@ This is a starter kit for bootstrapping full-stack applications with Turborepo. 
 
 # Project Structure
 
-After combining the Turbo starter kit with `next-starter`, `package-starter`, and `shadcn-ui-monorepo` you will have a full-stack application with the following structure:
+The starter kit uses `next-starter` and `shadcn-ui-monorepo` you will have a full-stack application with the following structure:
 
 ```
 ├── packages
 │   ├── ui
 ├── apps
 │   ├── web
-│   └── api
 ├── README.md
 ├── LICENSE
 ├── .gitignore

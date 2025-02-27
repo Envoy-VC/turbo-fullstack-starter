@@ -6,7 +6,7 @@
   "scripts": {
     "build": "next build",
     "check": "pnpm format:check && tsc --noEmit",
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "format": "pnpm biome format",
     "format:write": "pnpm biome format --write",
     "preview": "next build && next start",
@@ -14,6 +14,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/ui": "workspace:*",
     "@t3-oss/env-nextjs": "^0.12.0",
     "@tanstack/react-query": "^5.61.4",
     "@trpc/client": "^11.0.0-rc.446",

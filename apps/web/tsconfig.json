@@ -11,7 +11,8 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@repo/ui/*": ["../../packages/ui/src/*"]
     }
   },
   "include": [
@@ -19,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/env.js"
+    "src/env.js",
+    "postcss.config.mjs"
   ],
   "exclude": ["node_modules", "**/*.mjs", "**/*.js"]
 }

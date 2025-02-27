@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TRPCReactProvider } from '~/trpc/react';
 
 import type { ReactNode } from 'react';
+import '@repo/ui/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create T3 App',
