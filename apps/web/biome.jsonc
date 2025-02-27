@@ -1,13 +1,15 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "extends": ["klarity/biome"],
-  "files": {
-    "ignore": ["**/_generated/**"]
-  },
   "overrides": [
     {
       // Needed for Page/Layout/Error/NotFound components default export
       "include": [
+        "**/*.d.ts",
+        "*.config.ts",
+        "*.config.js",
+        "*.config.mjs",
+        "*.config.cjs",
         "./src/app/**/page.tsx",
         "./src/app/**/layout.tsx",
         "./src/app/**/not-found.tsx",
@@ -23,7 +25,7 @@
       }
     },
     {
-      "include": ["apps/web/src/env.js"],
+      "include": ["src/env.js"],
       "linter": {
         "rules": {
           "style": {
