@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-
-import type { ReactNode } from "react";
-
 import { GeistSans } from "geist/font/sans";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 import { TRPCReactProvider } from "@/trpc/react";
 import "@repo/ui/globals.css";

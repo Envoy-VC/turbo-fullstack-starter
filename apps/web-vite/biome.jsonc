@@ -1,13 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-  "extends": "//",
-  "files": {
-    "includes": ["!**/*.gen.ts"]
-  },
-  "linter": {
-    "domains": {
-      "react": "all"
-    }
-  },
-  "root": false
+	"$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+	"extends": ["@repo/config/biome/react"],
+	"root": false
 }

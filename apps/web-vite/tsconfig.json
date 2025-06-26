@@ -1,17 +1,41 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "klarity/tsconfig/bundler/dom/app",
-  "compilerOptions": {
-    "checkJs": true,
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "~/*": ["./src/*"],
-      "@repo/ui/*": ["../../packages/ui/src/*"]
-    }
-  },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mjs"],
-  "exclude": ["node_modules", "**/*.js"]
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		// Modern JavaScript output
+		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
+
+		// Paths (optional)
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+
+		// JSX (React)
+		"jsx": "react-jsx",
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"module": "ESNext",
+
+		// Module resolution & bundler behavior
+		"moduleResolution": "Bundler",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+
+		// Helpful checks for production
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+
+		// Strictness
+		"strict": true,
+		// Modern JavaScript output
+		"target": "ES2022"
+	},
+	"exclude": ["node_modules", "dist"],
+	"include": ["**/*.ts", "**/*.tsx"]
 }

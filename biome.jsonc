@@ -1,5 +1,4 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-  "extends": ["klarity/biome"],
-  "root": true
+  "extends": ["@repo/config/biome"]
 }

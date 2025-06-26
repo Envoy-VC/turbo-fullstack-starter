@@ -12,6 +12,6 @@
     "strictNullChecks": true
   },
   "exclude": ["node_modules", "dist"],
-  "extends": "klarity/tsconfig/bundler/dom/library",
+  "extends": "@repo/config/tsconfig/bundler/dom/library",
   "include": ["**/*.ts", "**/*.tsx"]
 }
