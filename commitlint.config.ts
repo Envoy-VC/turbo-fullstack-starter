@@ -10,6 +10,8 @@ export default {
         "deps",
         // Websites-related changes
         "web",
+        // UI related changes
+        "ui",
       ],
     ],
     "type-enum": [

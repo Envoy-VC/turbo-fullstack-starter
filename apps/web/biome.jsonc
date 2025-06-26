@@ -1,29 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-  "root": false,
-  "extends": "//",
-  "linter": {
-    "domains": {
-      "react": "all",
-      "next": "all"
-    }
-  },
-  "overrides": [
-    {
-      "includes": [
-        "apps/web/src/app/**/page.tsx",
-        "apps/web/src/app/**/layout.tsx",
-        "apps/web/src/app/**/not-found.tsx",
-        "apps/web/src/app/**/*error.tsx",
-        "apps/web/src/app/**/opengraph-image.tsx"
-      ],
-      "linter": {
-        "rules": {
-          "style": {
-            "noDefaultExport": "off"
-          }
-        }
-      }
-    }
-  ]
+	"$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+	"extends": ["./node_modules/klarity/biome/next.json"],
+	"root": false
 }
