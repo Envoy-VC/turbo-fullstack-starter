@@ -43,8 +43,8 @@
 		"dev": "next dev",
 		"format": "pnpm exec biome format",
 		"format:write": "pnpm exec biome format --write",
-		"lint": "pnpm exec biome lint",
-		"lint:write": "pnpm exec biome lint --write",
+		"lint": "pnpm exec biome lint && pnpm exec biome check",
+		"lint:write": "pnpm exec biome lint --write && pnpm exec biome check --write",
 		"preview": "next build && next start",
 		"start": "next start",
 		"typecheck": "tsc --noEmit"
