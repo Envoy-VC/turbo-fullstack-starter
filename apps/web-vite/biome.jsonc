@@ -1,15 +1,18 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
-  "extends": ["klarity/biome"],
+  "root": false,
+  "extends": "//",
+  "files": {
+    "includes": ["!**/*.gen.ts"]
+  },
+  "linter": {
+    "domains": {
+      "react": "all"
+    }
+  },
   "overrides": [
     {
-      "includes": [
-        "**/*.d.ts",
-        "**/*.config.ts",
-        "**/*.config.js",
-        "**/*.config.mjs",
-        "**/*.config.cjs"
-      ],
+      "includes": ["apps/web/src/app/**/*.tsx"],
       "linter": {
         "rules": {
           "style": {

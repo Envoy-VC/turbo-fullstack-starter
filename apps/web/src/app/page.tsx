@@ -1,9 +1,9 @@
-import { Button } from '@repo/ui/components/button';
+import { Button } from "@repo/ui/components/button";
 
 const Home = () => {
   return (
     <div>
-      <Button variant='default'>Hello World</Button>
+      <Button variant="default">Hello World</Button>
     </div>
   );
 };

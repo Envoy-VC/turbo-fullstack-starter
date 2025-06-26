@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { type ReactNode, useMemo } from 'react';
+import { type ReactNode, useMemo } from "react";
 
-import { type QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { type QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   unstable_httpBatchStreamLink as httpBatchStreamLink,
   loggerLink,
-} from '@trpc/client';
-import { createTRPCReact } from '@trpc/react-query';
-import type { inferRouterInputs, inferRouterOutputs } from '@trpc/server';
-import { SuperJSON } from 'superjson';
-import type { AppRouter } from '~/server/api/root';
+} from "@trpc/client";
+import { createTRPCReact } from "@trpc/react-query";
+import type { inferRouterInputs, inferRouterOutputs } from "@trpc/server";
+import { SuperJSON } from "superjson";
+import type { AppRouter } from "~/server/api/root";
 
-import { createQueryClient } from './query-client';
+import { createQueryClient } from "./query-client";
 
 let clientQueryClientSingleton: QueryClient | undefined;
 const getQueryClient = () => {
-  if (typeof window === 'undefined') {
+  if (typeof window === "undefined") {
     // Server: always make a new query client
     return createQueryClient();
   }
@@ -49,29 +49,26 @@ export const TRPCReactProvider = (props: { children: ReactNode }) => {
         links: [
           loggerLink({
             enabled: (op) =>
-              process.env.NODE_ENV === 'development' ||
-              (op.direction === 'down' && op.result instanceof Error),
+              process.env.NODE_ENV === "development" ||
+              (op.direction === "down" && op.result instanceof Error),
           }),
           httpBatchStreamLink({
             transformer: SuperJSON,
             url: `${getBaseUrl()}/api/trpc`,
             headers: () => {
               const headers = new Headers();
-              headers.set('x-trpc-source', 'nextjs-react');
+              headers.set("x-trpc-source", "nextjs-react");
               return headers;
             },
           }),
         ],
       }),
-    []
+    [],
   );
 
   return (
     <QueryClientProvider client={queryClient}>
-      <api.Provider
-        client={trpcClient}
-        queryClient={queryClient}
-      >
+      <api.Provider client={trpcClient} queryClient={queryClient}>
         {props.children}
       </api.Provider>
     </QueryClientProvider>
@@ -79,7 +76,7 @@ export const TRPCReactProvider = (props: { children: ReactNode }) => {
 };
 
 function getBaseUrl() {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return window.location.origin;
   }
 
@@ -87,5 +84,5 @@ function getBaseUrl() {
     return `https://${process.env.VERCEL_URL}`;
   }
 
-  return `http://localhost:${process.env.PORT ?? '3000'}`;
+  return `http://localhost:${process.env.PORT ?? "3000"}`;
 }
