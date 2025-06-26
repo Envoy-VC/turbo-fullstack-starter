@@ -1,7 +1,7 @@
 {
   "author": "Vedant Chainani <vedantchainani1084@gmail.com>",
   "devDependencies": {
-    "@biomejs/biome": "2.0.5"
+    "@biomejs/biome": "^2.0.5"
   },
   "exports": {
     "./biome": "./biome/base.json",
@@ -31,13 +31,12 @@
   "files": ["./biome", "./tsconfig"],
   "license": "MIT",
   "name": "@repo/config",
-  "type": "module",
   "scripts": {
-    "changeset": "changeset",
-    "format": "pnpm biome format",
-    "format:write": "pnpm biome format --write",
-    "release": "pnpm biome format --write && changeset publish",
-    "version-packages": "changeset version"
+    "format": "pnpm exec biome format",
+    "format:write": "pnpm exec biome format --write",
+    "lint": "pnpm exec biome lint",
+    "lint:write": "pnpm exec biome lint --write"
   },
+  "type": "module",
   "version": "0.0.1"
 }

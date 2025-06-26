@@ -35,8 +35,10 @@
   "license": "ISC",
   "name": "@repo/ui",
   "scripts": {
-    "format": "pnpm biome format",
-    "format:write": "pnpm biome format --write"
+    "format": "pnpm exec biome format",
+    "format:write": "pnpm exec biome format --write",
+    "lint": "pnpm exec biome lint",
+    "lint:write": "pnpm exec biome lint --write"
   },
   "version": "0.0.1"
 }

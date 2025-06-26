@@ -39,11 +39,12 @@
 	"private": true,
 	"scripts": {
 		"build": "next build",
-		"check": "pnpm format:check && tsc --noEmit",
+		"check": "pnpm format && tsc --noEmit",
 		"dev": "next dev",
 		"format": "pnpm exec biome format",
-		"format:check": "pnpm exec biome format",
 		"format:write": "pnpm exec biome format --write",
+		"lint": "pnpm exec biome lint",
+		"lint:write": "pnpm exec biome lint --write",
 		"preview": "next build && next start",
 		"start": "next start",
 		"typecheck": "tsc --noEmit"

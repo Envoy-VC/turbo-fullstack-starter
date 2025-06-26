@@ -1,5 +1,6 @@
 {
 	"dependencies": {
+		"@repo/ui": "workspace:*",
 		"@tanstack/react-query": "^5.81.2",
 		"@tanstack/react-router": "^1.121.39",
 		"@tanstack/router-devtools": "^1.121.39",
@@ -32,11 +33,12 @@
 	"private": true,
 	"scripts": {
 		"build": "vite build",
-		"check": "pnpm format:check && tsc --noEmit",
+		"check": "pnpm format && tsc --noEmit",
 		"dev": "vite",
 		"format": "pnpm exec biome format",
-		"format:check": "pnpm exec biome format",
 		"format:write": "pnpm exec biome format --write",
+		"lint": "pnpm exec biome lint",
+		"lint:write": "pnpm exec biome lint --write",
 		"serve": "vite preview",
 		"start": "vite",
 		"typecheck": "tsc --noEmit"
