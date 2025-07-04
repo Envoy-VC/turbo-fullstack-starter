@@ -84,6 +84,9 @@ pnpm-debug.log
 # Husky
 .husky/_
 
+# next.js
+next-env.d.ts
+
 # Vercel
 .vercel/
 
@@ -146,3 +149,8 @@ pre-commit.log
 *.rlib
 *.a
 *.lib
+
+# database
+prisma/db.sqlite
+prisma/db.sqlite-journal
+db.sqlite

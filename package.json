@@ -18,8 +18,10 @@
     "build": "turbo build",
     "commitlint": "commitlint --edit",
     "dev": "turbo dev",
-    "format": "turbo format",
-    "lint": "turbo lint",
+    "format": "pnpm exec biome format --write",
+    "format:check": "pnpm exec biome format",
+    "lint": "pnpm exec biome check --write",
+    "lint:check": "pnpm exec biome check",
     "lint:write": "turbo lint:write",
     "prepare": "lefthook install"
   }
