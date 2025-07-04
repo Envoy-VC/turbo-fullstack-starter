@@ -16,14 +16,8 @@
     "format": {
       "dependsOn": ["^format"]
     },
-    "format:write": {
-      "dependsOn": ["^format:write"]
-    },
     "lint": {
       "dependsOn": ["^lint"]
-    },
-    "lint:write": {
-      "dependsOn": ["^lint:write"]
     }
   },
   "ui": "tui"

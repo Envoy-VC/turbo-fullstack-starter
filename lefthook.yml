@@ -1,8 +1,7 @@
 pre-commit:
  commands:
   biome-check:
-   glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,css,html}'
-   run: pnpm exec biome format --write --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {staged_files}
+   run: pnpm format && pnpm lint
    stage_fixed: true
 
 commit-msg:
@@ -13,5 +12,4 @@ commit-msg:
 pre-push:
  commands:
   check:
-   glob: '*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,css,html}'
-   run: pnpm exec biome check --no-errors-on-unmatched --files-ignore-unknown=true --colors=off {push_files}
+   run: pnpm format && pnpm lint

@@ -1,41 +1,148 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# -------------------------------------
+# OS / Editor Junk
+# -------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.history
+
+# JetBrains
+.idea/
+*.iml
+
+# Backup / Temp
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.temp
+
+# -------------------------------------
+# Node.js / TypeScript
+# -------------------------------------
 
 # Dependencies
-node_modules
-.pnp
+node_modules/
+.pnp/
 .pnp.js
 
-# Local env files
+# Environment
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
-# Testing
-coverage
+# TypeScript
+*.tsbuildinfo
 
-# Turbo
-.turbo
-
-# Vercel
-.vercel
-
-# Build Outputs
+# Build Output
+dist/
+build/
 .next/
 out/
-build
-dist
 
+# Lint / Type Check
+eslintcache
+.cache/
 
-# Debug
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log
 
-# Misc
-.DS_Store
-*.pem
+# Turbo
+.turbo/
 
-# husky
+# Testing & Coverage
+coverage/
+test-results/
+*.log
+.jest/
+.nyc_output/
+.tap-snapshots/
+
+# Benchmarking
+benchmarks/results/
+artillery-report.json
+*.bench.*
+
+# Package Managers
+yarn-error.log
+lerna-debug.log
+pnpm-debug.log
+
+# Husky
 .husky/_
+
+# Vercel
+.vercel/
+
+# -------------------------------------
+# Rust
+# -------------------------------------
+
+# Build Output
+target/
+
+# Dependencies / Package
+Cargo.toml.bk
+
+# Debugging
+*.profraw
+*.dSYM/
+*.ll
+*.bc
+*.exe
+*.out
+*.pyc
+
+# Benchmark / Coverage
+flamegraph.svg
+*.bench
+*.bench.*
+htmlcov/
+grcov_report/
+tarpaulin-report.html
+tarpaulin-report.*
+lcov.info
+
+# Docs
+book/
+*.rs.bk
+
+
+# -------------------------------------
+# Git / Misc
+# -------------------------------------
+*.pem
+*.key
+*.crt
+
+# Git Hooks
+.githooks/
+pre-commit.log
+
+# Lockfiles to ignore globally
+*.lock
+
+# Binaries
+*.dll
+*.so
+*.dylib
+*.exe
+*.bin
+*.o
+*.obj
+*.rlib
+*.a
+*.lib
