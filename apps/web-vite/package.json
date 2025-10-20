@@ -28,7 +28,7 @@
     "postcss-load-config": "^6.0.1",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.9.3",
-    "vite": "^7.1.9"
+    "vite": "^7.1.11"
   },
   "name": "web-vite",
   "private": true,
